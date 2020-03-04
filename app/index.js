@@ -18,6 +18,6 @@ app.use(async (ctx, next)=> {
 });
 app.use(parameter(app))
 routing(app)
-app.listen(3000,'0.0.0.0', () => {
+app.listen(8888,'0.0.0.0', () => {
   console.log('服务器启动于3000端口')
 })
