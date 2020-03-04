@@ -6,16 +6,7 @@ const parameter = require('koa-parameter')
 const cors = require('koa2-cors')
 
 app.use(bodyparser())
-app.use(cors({
-  origin: function (ctx) {
-    return '*';
-  },
-  exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
-  maxAge: 5,
-  credentials: true,
-  allowMethods: ['GET', 'POST', 'DELETE'],
-  allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
-}));
+app.use(cors());
 app.use(parameter(app))
 routing(app)
 app.listen(3000, () => {
