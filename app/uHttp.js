@@ -1,6 +1,7 @@
 const Axios = require('axios')
-const {headers, qqMusicConfigParam} = require('./config')
+const {headers} = require('./config')
 const http = Axios.create({
+  baseURL: 'https://u.y.qq.com/',
   headers,
   timeout: 3000
 })
